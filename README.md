@@ -5,7 +5,7 @@
 https://github.com/github/gitignore/tree/main
 
 ## Create Virtual env
-python -m venv /env  # env1 envname
+python -m venv env  # env1 envname
 
 Activate the env command => . env/Scripts/activate
 
