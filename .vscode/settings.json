@@ -1,0 +1,122 @@
+{
+  "workbench.colorCustomizations": {
+    "tab.activeBackground": "#29459e", // Set active tab background to red
+    "tab.inactiveBackground": "#292929", // Set inactive tab background to green
+    // "tab.activeForeground": "#000000",
+    // "list.inactiveSelectionBackground": "#C5DEF0",
+    // "sideBar.background": "#F8F6F6",
+    // "sideBar.foreground": "#000000",
+    "editor.background": "#141212",
+    // "editor.foreground": "#000000",
+    // "sideBarSectionHeader.background": "#CAC9C9",
+    // "sideBarSectionHeader.foreground": "#000000",
+    // "activityBar.border": "#FFFFFF",
+    // "statusBar.background": "#102F97",
+    // "scrollbarSlider.activeBackground": "#77D4CB",
+    // "scrollbarSlider.hoverBackground": "#8CE6DA",
+    // "badge.background": "#81CA91"
+  },
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": [
+          "string.quoted",
+          "comment"
+        ],
+        "settings": {
+          "foreground": "#678088", // Set keyword color 
+          "fontStyle": "italic",
+        },
+        // "keyword",
+        // "string.quoted.double",
+        // "string.quoted.other",
+        // "string.quoted.single",
+        // "string.quoted.triple",
+        // "string.other"
+      },
+      {
+        "scope": [
+          // "variable",
+          "variable.parameter"
+        ],
+        "settings": {
+          "foreground": "#d1d1d1", // Set keyword color 
+          "fontStyle": "italic",
+        },
+      },
+      {
+        "scope": [
+          "keyword",
+        ],
+        "settings": {
+          // "fontStyle": "bold",
+        },
+      },
+      {
+        "scope": [
+          "entity.name.function",
+          "support.function",
+          "support.function.construct", 
+          "entity.name.class",
+          "entity.name.type.class"
+        ],
+        "settings": {
+          "foreground": "#d1a061",
+          // "fontStyle": "bold",
+        },
+      },
+      {
+        "scope": [
+          "entity.name.class",
+          "entity.name.type.class"
+        ],
+        "settings": {
+          "foreground": "#4EC9B0",
+          "fontStyle": "italic",
+        },
+      }
+    ]
+  },
+  "black-formatter.importStrategy": "fromEnvironment",
+  "black-formatter.interpreter": [
+    "${workspaceFolder}\\env\\Scripts\\python.exe"
+  ],
+  "black-formatter.path": [
+    "${workspaceFolder}\\env\\Scripts\\black.exe"
+  ],
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+    "editor.rulers": [
+      80
+    ],
+  }
+}
+// Black console log error
+// 2025-01-01 11:47:05.607 [info] [Warn  - 11:47:05 AM] Skipping standard library file: c:\Users\gan\Desktop\BackendDev\monthly_challenges\manage.py
+// The problem happens when the source code is inside the virtual environment, that is, in the same directory that holds bin/, lib/, and pyvenv.cfg:
+// 
+// 
+// 
+// Trying some settings
+// 
+//   {
+//     "[python]": {
+//       "editor.codeActionsOnSave": {
+//         "source.fixAll": true,
+//         "source.organizeImports": true
+//       },
+//       "editor.defaultFormatter": "ms-python.black-formatter",
+//       "editor.formatOnSave": true,
+//       "editor.rulers": [
+//         88,
+//         120
+//       ]
+//     },
+//     "black-formatter.importStrategy": "fromEnvironment",
+//     "black-formatter.interpreter": [
+//       "${workspaceFolder}/.venv/bin/python"
+//     ],
+//     "black-formatter.path": ["${workspaceFolder}/.venv/bin/black"],
+//     "isort.args": ["--profile", "black"],
+//   }
