@@ -15,3 +15,16 @@ class PizzaSize(Enum):
 
 
 print(f"Pizza size is {PizzaSize.MEDIUM.value}")
+
+
+class Role(Enum):
+    """Definig roles"""
+
+    # value automatically increase as per declaration order
+
+    ASSOCIATE = auto()
+    SERVISOR = auto()
+    MANAGER = auto()
+
+
+print(f"{Role.MANAGER.name} : ", Role.MANAGER.value)
